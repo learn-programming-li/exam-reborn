@@ -17,7 +17,7 @@
 
 | 首页 | 题库列表 |
 |---|---|
-| <img src="docs/screenshots/home.png" width="260"> | <img src="docs/screenshots/banks.png" width="260"> |
+| ![首页](docs/screenshots/home.png) | ![题库列表](docs/screenshots/banks.png) |
 
 > 练习页、导入预览页的截图待补（见 `docs/screenshots/`）。
 
