@@ -2,7 +2,6 @@
 
 一个完全离线的 Android 刷题 App：自己建题库、从文件批量导入试卷、按五种题型练习并记录解析。
 
-
 ---
 
 ## 它能做什么
@@ -32,7 +31,30 @@
 | 选项/答案 | `data/OptionCodec`、`data/AnswerCodec`：把多选、判断题的存储格式和业务格式分开 |
 | UI | Material 3 + 自定义 drawable（渐变、玻璃卡片、深色主题 `values-night`） |
 
+### 界面与页面跳转
+
+6 个页面全部用 Activity（没有用 Fragment + 单 Activity 的方案，因为这个体量下 Activity 更直白）：
+
+```
+MainActivity（启动页 / 品牌动画）
+└→ HomeActivity（首页：开始问答 / 查看题库 / 我的题库）
+   ├→ BankListActivity（题库列表：新建 / 切换 / 进入）
+   │    └→ EditQuestionActivity（新增题目）
+   ├→ QaActivity（练习：题目 → 选项 → 提交 → 对错与解析）
+   │    └→ EditQuestionActivity（编辑当前题）
+   └→ ImportPreviewActivity（导入预览：识别统计 / 勾选 / 警告 / 导入）
+```
+
+界面层做的事：
+
+- 界面元素基本用**自定义 shape drawable** 拼出来（渐变背景、玻璃卡片、按钮、输入框），没有引入 UI 图片资源
+- Material 3 主题 + `values-night` 深色适配
+- 列表用 `RecyclerView` + 自定义 Adapter，弹窗统一走 `dialog/AppDialogs`
+- 用 `InsetUtils` / `GlassUtils` 处理状态栏内边距与毛玻璃效果
+
 ### 真正花时间的部分：试卷解析器
+
+> 这一部分由 [@DBW176](https://github.com/DBW176) 实现，放在这里是为了说明项目的难点。
 
 `PaperParser` 约 600 行，负责把"人写的试卷"变成结构化题目，支持两种输入：
 
@@ -89,12 +111,12 @@ gradlew assembleDebug
 
 ## 背景
 
-课程项目，和同学一起做的第一个 Android 应用。界面后来重做过一版（AI 辅助生成初稿，自己调样式与交互），核心的解析器和数据层是手写的。
+课程项目，和同学一起做的第一个 Android 应用。界面部分后来重做过一版（AI 辅助生成初稿，样式与交互自己调）。
 
-**分工**（待补全）：
+**分工**：
 
-- 【同学姓名 / GitHub 用户名】：【负责的部分】
-- 我：试卷解析器（`PaperParser`）、Room 数据层、导入预览与测试
+- **我**（[@learn-programming-li](https://github.com/learn-programming-li)）：前端界面与页面跳转 —— 6 个 Activity 的布局、主题与样式（渐变 / 玻璃卡片 / 深色模式）、底部导航与页面切换、列表与弹窗交互、导入预览的勾选流程
+- **DBW176**（[@DBW176](https://github.com/DBW176)）：后端数据与解析 —— Room 实体与 DAO、`PaperParser` 试卷解析器（约 600 行）、选项/答案编码、解析器单测
 
 ## License
 
