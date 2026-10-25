@@ -1,0 +1,47 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.examreborn'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.examreborn"
+        minSdk 33
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // Room：Java 项目走 annotationProcessor，不要用 kapt / KSP
+    implementation libs.room.runtime
+    annotationProcessor libs.room.compiler
+
+    testImplementation libs.junit
+    // 单测里跑 PaperParser（org.json 在 Android 运行时由系统提供，跑 JUnit 时要真库）
+    testImplementation libs.json
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

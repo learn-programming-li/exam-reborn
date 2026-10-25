@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 品牌：所有可点操作统一靛蓝 -->
+    <color name="brand_indigo">#3B44B5</color>
+    <color name="brand_indigo_deep">#2B3190</color>
+    <color name="hero_start">#5059DB</color>
+    <color name="hero_end">#353CB0</color>
+    <color name="brand_terracotta">#C4501B</color>
+
+    <!-- 背景网格渐变（毛玻璃后面的那层雾面底色） -->
+    <color name="mesh_base">#FBFCFF</color>
+    <color name="mesh_base_end">#EBEFFB</color>
+    <color name="blob_indigo">#596E76F2</color>
+    <color name="blob_indigo_mid">#2E6E76F2</color>
+    <color name="blob_violet">#4DA78BFA</color>
+    <color name="blob_violet_mid">#26A78BFA</color>
+    <color name="blob_peach">#59F0A868</color>
+    <color name="blob_peach_mid">#2AF0A868</color>
+
+    <!-- 玻璃层 -->
+    <color name="glass_card">#B8FFFFFF</color>
+    <color name="glass_card_strong">#E0FFFFFF</color>
+    <color name="glass_stroke">#E6FFFFFF</color>
+    <color name="glass_bar">#B3FFFFFF</color>
+    <color name="glass_hairline">#1A1B2033</color>
+    <color name="icon_chip_bg">#2E5B63F0</color>
+
+    <!-- 中性 -->
+    <color name="text_primary">#1F2028</color>
+    <color name="text_secondary">#7E828F</color>
+    <color name="home_subtitle">#B0865C</color>
+
+    <!-- 语义色：只在正确答案区出现 -->
+    <color name="brand_green">#1F8A54</color>
+    <color name="answer_bg">#B8E7F3EC</color>
+    <color name="answer_stroke">#66C6E3D3</color>
+    <color name="answer_text">#1B6B46</color>
+    <color name="input_stroke">#E2E6F2</color>
+</resources>

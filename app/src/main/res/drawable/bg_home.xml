@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  全 app 通用的"雾面网格"背景：
+  一层竖向浅色渐变 + 三团弥散色斑（径向渐变，边缘自然透明）。
+  配合 GlassUtils 的 RenderEffect 模糊，就是毛玻璃后面那层柔光。
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 基底 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/mesh_base_end"
+                android:startColor="@color/mesh_base" />
+        </shape>
+    </item>
+
+    <!-- 右上：靛蓝团 -->
+    <item
+        android:width="460dp"
+        android:height="460dp"
+        android:gravity="top|right">
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="@color/blob_indigo_mid"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="230dp"
+                android:startColor="@color/blob_indigo"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <!-- 左下：暖橙团 -->
+    <item
+        android:width="380dp"
+        android:height="380dp"
+        android:gravity="bottom|left">
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="@color/blob_peach_mid"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="190dp"
+                android:startColor="@color/blob_peach"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <!-- 中下：紫罗兰团 -->
+    <item
+        android:width="330dp"
+        android:height="330dp"
+        android:gravity="center_horizontal|bottom">
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="@color/blob_violet_mid"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="165dp"
+                android:startColor="@color/blob_violet"
+                android:type="radial" />
+        </shape>
+    </item>
+
+</layer-list>

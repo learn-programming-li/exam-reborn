@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 启动页专用：更深的靛蓝网格，作为品牌开场，同时和毛玻璃语言一致 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:endColor="#1B1F63"
+                android:startColor="#3941B8" />
+        </shape>
+    </item>
+
+    <item
+        android:width="440dp"
+        android:height="440dp"
+        android:gravity="top|right">
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="#3D7C86FF"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="220dp"
+                android:startColor="#59868FFF"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <item
+        android:width="360dp"
+        android:height="360dp"
+        android:gravity="bottom|left">
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="#33FF9E5E"
+                android:endColor="@android:color/transparent"
+                android:gradientRadius="180dp"
+                android:startColor="#59FF9E5E"
+                android:type="radial" />
+        </shape>
+    </item>
+
+</layer-list>

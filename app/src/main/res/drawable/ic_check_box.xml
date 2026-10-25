@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- 绿色方块 -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M5,2.5h14a2.5,2.5 0 0 1 2.5,2.5v14a2.5,2.5 0 0 1 -2.5,2.5H5A2.5,2.5 0 0 1 2.5,19V5A2.5,2.5 0 0 1 5,2.5Z" />
+    <!-- 白色对勾 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10.2,16.2L6.4,12.4 5,13.8l5.2,5.2L21,8.2 19.6,6.8Z" />
+</vector>
