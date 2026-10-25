@@ -120,4 +120,4 @@ gradlew assembleDebug
 
 ## License
 
-MIT（如果你打算公开，建议保留这一段；不想被复用就删掉）
+MIT
