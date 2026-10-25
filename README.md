@@ -15,13 +15,11 @@
 
 ## 截图
 
-> 待补：把截图放进 `docs/screenshots/`，然后取消下面注释。
+| 首页 | 题库列表 |
+|---|---|
+| <img src="docs/screenshots/home.png" width="260"> | <img src="docs/screenshots/banks.png" width="260"> |
 
-<!--
-| 首页 | 题库 | 练习 | 导入预览 |
-|---|---|---|---|
-| ![](docs/screenshots/home.png) | ![](docs/screenshots/banks.png) | ![](docs/screenshots/qa.png) | ![](docs/screenshots/import.png) |
--->
+> 练习页、导入预览页的截图待补（见 `docs/screenshots/`）。
 
 ## 技术要点
 
